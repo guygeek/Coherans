@@ -8,7 +8,6 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @Gedmo\Tree(type="nested")
  * @ORM\Table(name="organization")
- * use repository for handy tree functions
  * @ORM\Entity(repositoryClass="Gedmo\Tree\Entity\Repository\NestedTreeRepository")
  */
 class Organization
@@ -24,6 +23,11 @@ class Organization
      * @ORM\Column(name="name", type="string", length=64)
      */
     private $name;
+    
+    /**
+     * @ORM\Column(name="type", type="string", length=64)
+     */
+    private $type;
 
     /**
      * @Gedmo\TreeLeft
@@ -76,6 +80,16 @@ class Organization
     {
         return $this->name;
     }
+    
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    public function getType()
+    {
+        return $this->type;
+    }
 
     public function setParent(Organization $parent = null)
     {
@@ -86,4 +100,6 @@ class Organization
     {
         return $this->parent;
     }
+    
 }
+

@@ -83,30 +83,18 @@ class __TwigTemplate_333cec9e3bfb02d6a54898ca8ee784a742ee0713409c665297400e5fe11
         echo "<div class=\"row\">
         
         <div class=\"col-md-6\">
-            
-            <form action=\"";
+
+    ";
         // line 37
-        echo $this->env->getExtension('routing')->getPath("organization_create");
-        echo "\" method=\"post\" ";
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
-        echo ">
-                
-                
-                ";
-        // line 40
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
         echo "
-                
-                <input type=\"submit\" class=\"btn btn-primary\" id=\"\" value=\"Ajouter\"/>
-              
-            </form>           
-           
-        </div>
+
+     </div>
         <div class=\"col-md-12\">    
             <ul class=\"list-inline text-right\">
                 <li>
                     <a href=\"";
-        // line 50
+        // line 43
         echo $this->env->getExtension('routing')->getPath("organization");
         echo "\">
                     Retour aux organisations
@@ -136,6 +124,6 @@ class __TwigTemplate_333cec9e3bfb02d6a54898ca8ee784a742ee0713409c665297400e5fe11
 
     public function getDebugInfo()
     {
-        return array (  110 => 50,  97 => 40,  89 => 37,  83 => 33,  80 => 31,  66 => 20,  60 => 17,  50 => 9,  47 => 8,  41 => 6,  37 => 2,  35 => 4,  11 => 2,);
+        return array (  98 => 43,  89 => 37,  83 => 33,  80 => 31,  66 => 20,  60 => 17,  50 => 9,  47 => 8,  41 => 6,  37 => 2,  35 => 4,  11 => 2,);
     }
 }

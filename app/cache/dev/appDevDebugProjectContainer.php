@@ -967,7 +967,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf2orm_default_6fdbf95525bf1e185a1895c7506e735450e74c1698c445cae21372c11642cf9d');
+        $instance->setNamespace('sf2orm_default_d837d922224a5b2986fb28f30d4afe1c070d4e72762c57957b1a952d77892a9a');
 
         return $instance;
     }
@@ -984,7 +984,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_query_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf2orm_default_6fdbf95525bf1e185a1895c7506e735450e74c1698c445cae21372c11642cf9d');
+        $instance->setNamespace('sf2orm_default_d837d922224a5b2986fb28f30d4afe1c070d4e72762c57957b1a952d77892a9a');
 
         return $instance;
     }
@@ -1001,7 +1001,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_result_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf2orm_default_6fdbf95525bf1e185a1895c7506e735450e74c1698c445cae21372c11642cf9d');
+        $instance->setNamespace('sf2orm_default_d837d922224a5b2986fb28f30d4afe1c070d4e72762c57957b1a952d77892a9a');
 
         return $instance;
     }
@@ -4536,8 +4536,8 @@ class appDevDebugProjectContainer extends Container
             'assetic.variables' => array(
 
             ),
-            'assetic.java.bin' => 'C:\\Windows\\system32\\java.EXE',
-            'assetic.node.bin' => '/usr/bin/node',
+            'assetic.java.bin' => 'C:\\Windows\\SYSTEM32\\java.EXE',
+            'assetic.node.bin' => 'C:\\Program Files\\nodejs\\\\node.EXE',
             'assetic.ruby.bin' => '/usr/bin/ruby',
             'assetic.sass.bin' => '/usr/bin/sass',
             'assetic.filter.less.class' => 'Assetic\\Filter\\LessFilter',

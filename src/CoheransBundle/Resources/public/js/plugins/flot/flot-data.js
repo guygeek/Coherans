@@ -1239,6 +1239,7 @@ $(function() {
             [1355571900000, 6000]
         ]
     };
-    $.plot($("#flot-bar-chart"), [barData], barOptions);
+    
+    if( $("#flot-bar-chart").length > 0 ) $.plot($("#flot-bar-chart"), [barData], barOptions);
 
 });

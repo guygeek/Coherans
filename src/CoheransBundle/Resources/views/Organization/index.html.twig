@@ -1,4 +1,3 @@
-
 {% extends "CoheransBundle::layout.html.twig" %}
 
 {% block title "Organizations" %}
@@ -16,7 +15,7 @@
                     <a href="{{ path('homepage') }}"><i class="fa fa-fw fa-dashboard"></i> Accueil</a>
                 </li>               
                 <li class="active">
-                    <i class="fa fa-building"></i> Organisation
+                    <i class="fa fa-building"></i> Organisations
                 </li>
             </ol>
         </div>
@@ -34,23 +33,23 @@
                     <tr>
                         <th>Id</th>
                         <th>Nom</th>
-                        <th>Parent</th>
+                        <th>Type</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                {% for organization in organizations %}
+                {% for entity in entities %}
                     <tr>
-                        <td>{{ organization.id }}</td>
-                        <td>{{ organization.name }}</td>
-                        <td></td>
+                        <td>{{ entity.id }}</td>
+                        <td>{{ entity.name }}</td>
+                        <td>{{ entity.type }}</td>
                         <td>
                         <ul class="list-inline">
                             <li>
-                                <a href="{{ path('organization_show', { 'id': organization.id }) }}" class="fa fa-eye" title="Détail de l'organization"><i></i></a>
+                                <a href="{{ path('organization_show', { 'id': entity.id }) }}" class="fa fa-eye" title="Détail de l'organization"><i></i></a>
                             </li>
                             <li>
-                                <a href="{{ path('organization_edit', { 'id': organization.id }) }}" class="fa fa-pencil" title="Modifier l'organization"><i></i></a>
+                                <a href="{{ path('organization_edit', { 'id': entity.id }) }}" class="fa fa-pencil" title="Modifier l'organization"><i></i></a>
                             </li>
                         </ul>
                         </td>

@@ -14,6 +14,8 @@ class DefaultController extends Controller
     * */
     public function indexAction()
     {
-        return $this->render('CoheransBundle:Default:index.html.twig');
+        $nbOrganizations = count($this->getDoctrine()->getRepository('CoheransBundle:Organization')->findAll());
+        
+        return $this->render('CoheransBundle:Default:index.html.twig',array('nbOrganizations'=>$nbOrganizations));
     }
 }

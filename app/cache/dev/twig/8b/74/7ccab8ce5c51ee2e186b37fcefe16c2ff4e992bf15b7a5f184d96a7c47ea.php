@@ -61,7 +61,7 @@ class __TwigTemplate_8b747ccab8ce5c51ee2e186b37fcefe16c2ff4e992bf15b7a5f184d96a7
         <form method=\"";
         // line 9
         echo twig_escape_filter($this->env, twig_lower_filter($this->env, (isset($context["form_method"]) ? $context["form_method"] : $this->getContext($context, "form_method"))), "html", null, true);
-        echo "\" class=\"form-horizontal\" 
+        echo "\" 
             action=\"";
         // line 10
         echo twig_escape_filter($this->env, (isset($context["action"]) ? $context["action"] : $this->getContext($context, "action")), "html", null, true);
