@@ -1,0 +1,76 @@
+
+{% extends "CoheransBundle::layout.html.twig" %}
+
+{% block title "Ajouter une organisation" %}
+    
+{% block heading %}
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Organisations <small>Détail de l'organisation</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li class="">
+                    <a href="{{ path('homepage') }}"><i class="fa fa-fw fa-dashboard"></i> Accueil</a>
+                </li> 
+                <li class="">
+                    <a href="{{ path('organization') }}"><i class="fa fa-fw fa-building"></i> Organisations</a>
+                </li>
+                <li class="active">
+                    <i class="fa fa-eye"></i> Détail
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+{% endblock %} 
+ 
+{% block content -%}
+    
+        <div class="row">
+        
+        <div class="col-md-12">
+            
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th class="col-lg-4">Id</th>
+                        <td>{{ organization.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Nom</th>
+                        <td>{{ organization.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Hierarchie</th>
+                        <td>{{ htmlTree | raw }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+            
+        <div class="col-md-8">
+            <ul class="list-inline text-left">
+                <li>
+                    <a href="{{ path('organization_edit', { 'id': organization.id }) }}" class="btn btn-primary">
+                    Modifier
+                    </a>
+                </li>
+              
+            </ul>
+
+        </div>
+        <div class="col-md-4">
+            <ul class="list-inline text-right">
+                <li>
+                    <a href="{{ path('organization') }}">
+                    Retour aux organisations
+                    </a>
+                </li>
+            </ul>
+
+        </div>                   
+
+{% endblock %}

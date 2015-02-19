@@ -1,0 +1,5 @@
+services:
+    coherans.form.type.organization:
+        class: CoheransBundle\Form\OrganizationType
+        tags:
+            - { name: form.type, alias: organization }

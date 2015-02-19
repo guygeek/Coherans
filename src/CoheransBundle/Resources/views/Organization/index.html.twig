@@ -1,0 +1,94 @@
+
+{% extends "CoheransBundle::layout.html.twig" %}
+
+{% block title "Organizations" %}
+    
+{% block heading %}
+    
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Organisations <small>Liste des organisations</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li class="">
+                    <a href="{{ path('homepage') }}"><i class="fa fa-fw fa-dashboard"></i> Accueil</a>
+                </li>               
+                <li class="active">
+                    <i class="fa fa-building"></i> Organisation
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+{% endblock %}    
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-lg-8">
+            
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nom</th>
+                        <th>Parent</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for organization in organizations %}
+                    <tr>
+                        <td>{{ organization.id }}</td>
+                        <td>{{ organization.name }}</td>
+                        <td></td>
+                        <td>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="{{ path('organization_show', { 'id': organization.id }) }}" class="fa fa-eye" title="Détail de l'organization"><i></i></a>
+                            </li>
+                            <li>
+                                <a href="{{ path('organization_edit', { 'id': organization.id }) }}" class="fa fa-pencil" title="Modifier l'organization"><i></i></a>
+                            </li>
+                        </ul>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            
+        </div>
+        
+        <div class="col-md-4">
+            
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Hiérarchie</h3>
+              </div>
+              <div class="panel-body">
+                {{ htmlTree | raw }}
+              </div>
+            </div>
+            
+            
+
+        </div>
+            
+         <div class="col-md-12">
+            
+             <a href="{{ path('organization_new') }}" class="btn btn-primary" >Ajouter une organisation</a>
+
+        </div>
+               
+                
+                
+    </div>
+    <!-- /.row -->
+
+
+
+
+{% endblock %}
+

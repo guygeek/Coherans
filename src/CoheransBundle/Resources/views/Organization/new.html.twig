@@ -1,0 +1,63 @@
+
+{% extends "CoheransBundle::layout.html.twig" %}
+
+{% form_theme form 'CoheransBundle:Form:bootstrap-form-horizontal.html.twig' %}
+
+{% block title "Ajouter une organisation" %}
+    
+{% block heading %}
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Organisations <small>Ajouter une organisation</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li class="">
+                    <a href="{{ path('homepage') }}"><i class="fa fa-fw fa-dashboard"></i> Accueil</a>
+                </li> 
+                <li class="">
+                    <a href="{{ path('organization') }}"><i class="fa fa-fw fa-building"></i> Organisations</a>
+                </li>
+                <li class="active">
+                    <i class="fa fa-plus"></i> Ajouter
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+{% endblock %} 
+
+{% block content -%}
+    
+    <div class="row">
+        
+        <div class="col-md-6">
+            
+            <form action="{{ path('organization_create') }}" method="post" {{ form_enctype(form) }}>
+                
+                
+                {{ form_widget(form) }}
+                
+                <input type="submit" class="btn btn-primary" id="" value="Ajouter"/>
+              
+            </form>           
+           
+        </div>
+        <div class="col-md-12">    
+            <ul class="list-inline text-right">
+                <li>
+                    <a href="{{ path('organization') }}">
+                    Retour aux organisations
+                    </a>
+                </li>
+            </ul>
+                    
+        </div>
+        
+    </div>
+
+
+
+
+{% endblock %}

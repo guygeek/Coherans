@@ -1,0 +1,3 @@
+coherans:
+    resource: "@CoheransBundle/Controller/"
+    type:     annotation
